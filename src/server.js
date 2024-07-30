@@ -51,4 +51,12 @@ app.put("/counter/:value", function (req, res) {
     counter: counter,
   });
 });
+
+app.get("/counter/:name", function(req, res){
+    const name =  req.params.name;
+    counter =  name;
+    res.status(200).json({
+       counter: counter, 
+    })
+})
 module.exports = app;
